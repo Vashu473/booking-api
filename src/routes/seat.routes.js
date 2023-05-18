@@ -9,7 +9,7 @@ const { getSeatC, bookC, addSeatC } = require("../controllers/seat.controller");
 
 //  get token will validate your jwt token
 
-SeatRouter.get("/getSeat", getToken, getSeatC);
+SeatRouter.get("/getSeat/:department", getToken, getSeatC);
 SeatRouter.post("/addSeat", getToken, addSeatC);
 SeatRouter.post("/book", getToken, bookC);
 

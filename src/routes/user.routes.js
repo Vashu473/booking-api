@@ -15,6 +15,6 @@ const {
 UserRouter.get("/profile", getToken, profileC);
 UserRouter.post("/login", loginC);
 UserRouter.post("/signup", signupC);
-UserRouter.delete("/delete:id", deleteC);
+UserRouter.delete("/delete/:id", deleteC);
 
 module.exports = UserRouter;
