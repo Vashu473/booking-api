@@ -5,7 +5,7 @@ const { getSeatM, bookM, addSeatM } = require("../models/seat.model");
 // test to get data
 async function getSeatC(req, res) {
   // console.log("Api name", req.body);
-  const result = await getSeatM(req.body);
+  const result = await getSeatM(req.params.department);
   // console.log("Result--", result);
   // logs(req.body, result, "Test -- File name");
   return res.json(result).status(200);

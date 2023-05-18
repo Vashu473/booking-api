@@ -1,9 +1,9 @@
 const Report = require("../db/schema/Report.schema");
 const Seat = require("../db/schema/Seat.schema");
 
-async function getSeatM(body) {
+async function getSeatM(department) {
   try {
-    const data = await Seat.find({});
+    const data = await Seat.find({ department });
     return { message: data, success: true, token: null };
   } catch (error) {
     return { message: error, success: false, token: null };
