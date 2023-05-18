@@ -5,7 +5,7 @@ const Report = require("../db/schema/Report.schema");
 
 async function getreportM() {
   try {
-    const data = Report.find({});
+    const data = await Report.find({});
     return { message: data, success: true, token: null };
   } catch (error) {
     return { message: error, success: false, token: null };
