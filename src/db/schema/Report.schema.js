@@ -3,10 +3,11 @@ const mongoose = require("mongoose");
 const ReportSchema = mongoose.Schema(
   {
     seat: String,
-    location: String,
-    store: String,
+    department: String,
     email: String,
     name: String,
+    start: Date,
+    end: Date,
   },
   { timestamps: true }
 );
